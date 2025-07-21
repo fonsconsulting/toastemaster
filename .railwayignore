@@ -1,0 +1,10 @@
+node_modules
+.git
+*.md
+.env.example
+.gitignore
+README.md
+*.log
+.DS_Store
+src/tempobook
+src/stories 

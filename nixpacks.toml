@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ['nodejs-18_x']
-
-[phases.build]
-cmds = ['npm ci --production=false', 'npm run build', 'npm install -g serve']
-
-[start]
-cmd = 'serve -s dist -l $PORT' 

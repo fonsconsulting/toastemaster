@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Check, Mail, Phone, User, MapPin, Calendar, Users, FileText } from "lucide-react";
+import { Check, Mail, Phone, User, MapPin, Calendar, Users, FileText, DollarSign } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -166,7 +166,7 @@ const JoinUsForm = () => {
             <div>
               <CardTitle className="text-3xl font-bold">Join Hurstville Weekend Toastmasters</CardTitle>
               <CardDescription className="text-blue-100 text-lg">
-                Take the first step toward improving your communication and leadership skills
+                Email us to tell us you will be joining us!
               </CardDescription>
             </div>
           </div>
@@ -623,6 +623,60 @@ const JoinUsForm = () => {
                       </FormItem>
                     )}
                   />
+                </div>
+              </div>
+
+              {/* Payment Instructions */}
+              <div className="border-0 rounded-2xl p-8 bg-gradient-to-br from-yellow-50 to-orange-50 shadow-xl border border-orange-100">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="bg-gradient-to-r from-orange-500 to-yellow-500 p-3 rounded-2xl shadow-lg">
+                    <DollarSign className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">Payment Instructions</h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="bg-white/80 p-6 rounded-2xl border border-orange-200">
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      All new members of Hurstville Weekend Toastmasters are required to pay a one-time fee of <strong>AUD $50</strong> to Toastmasters International. 
+                      This amount covers your official registration with Toastmasters International and is non-refundable.
+                    </p>
+                    
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      In addition, the club charges a monthly fee of <strong>AUD $16.50</strong>. These membership dues are paid twice a year by all members and are 
+                      pro-rated from the month you join. For example, if you join in July, you will only pay the dues for July to September (three months), 
+                      calculated at AUD $16.50 per month.
+                    </p>
+
+                    <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                      <h4 className="font-bold text-gray-800 mb-3">The main fee breakdown is as follows:</h4>
+                      <ul className="space-y-1 text-gray-700">
+                        <li>• New member once-off Toastmasters International fee: <strong>AUD $50</strong></li>
+                        <li>• Monthly pro-rata fee: <strong>AUD $16.50 × [number of months remaining in the current period]</strong></li>
+                        <li>• Your total payment is therefore: <strong>AUD $50 + (AUD $16.50 × number of months remaining)</strong></li>
+                      </ul>
+                    </div>
+
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Membership periods run from October to March and April to September. When you join, you only pay for the months left in the current period.
+                    </p>
+
+                    <div className="bg-green-50 p-4 rounded-lg mb-4">
+                      <h4 className="font-bold text-gray-800 mb-3">To make your payment, please use the following club bank account details:</h4>
+                      <ul className="space-y-1 text-gray-700">
+                        <li><strong>Account Name:</strong> Hurstville Weekend Toastmasters</li>
+                        <li><strong>BSB:</strong> 062184</li>
+                        <li><strong>Account Number:</strong> 10108278</li>
+                      </ul>
+                    </div>
+
+                    <p className="text-gray-700 leading-relaxed">
+                      After completing your payment, please take a screenshot of your payment receipt and email it to: 
+                      <a href="mailto:tm.hurstville@gmail.com" className="text-blue-600 hover:text-blue-800 font-medium ml-1">
+                        tm.hurstville@gmail.com
+                      </a>.
+                    </p>
+                  </div>
                 </div>
               </div>
 
